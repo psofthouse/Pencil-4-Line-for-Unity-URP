@@ -5,8 +5,8 @@
   "unity": "2018.3",
   "description": "Pencil+ 4 Line extension package for URP (Universal Render Pipeline).",
   "dependencies": {
-    "jp.co.psoft.pencil_4.line.unity": "4.0.4",
-    "com.unity.render-pipelines.universal": "7.0.0"
+    "jp.co.psoft.pencil_4.line.unity": "4.1.0",
+    "com.unity.render-pipelines.universal": "7.2.0"
   },
   "author": {
     "name": "P SOFTHOUSE Co., Ltd.",

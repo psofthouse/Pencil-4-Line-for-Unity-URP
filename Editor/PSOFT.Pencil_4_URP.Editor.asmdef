@@ -1,0 +1,17 @@
+{
+    "name": "PSOFT.Pencil_4_URP.Editor",
+    "references": [
+        "GUID:13ff4e4eb6517d2478807bc9c55e7ed1"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
