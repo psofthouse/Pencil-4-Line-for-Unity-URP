@@ -78,6 +78,7 @@ namespace Pencil_4.URP
 
                     // 描画設定
                     cmd.SetGlobalFloat("_Alpha", alpha.value);
+                    cmd.SetGlobalVector("_BlitScaleBias", new Vector4(1, 1, 0, 0));
                     cmd.Blit(lineEffect.PencilRenderer.Texture, renderTarget, material);
                 }
             }

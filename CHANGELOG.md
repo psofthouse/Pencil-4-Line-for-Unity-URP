@@ -1,4 +1,11 @@
-# Changelog - PSOFT Pencil+ 4 Line URP
+# Changelog - PSOFT Pencil+ 4 Line URP for Unity
+
+## [1.1.1] - 2023-08-01
+
+### 修正点
+- URP 13.1.2 以降で発生していたエラーの修正
+- 動作環境を Unity 2022.1 以降 / URP 13.1.2 以降 に変更
+
 
 ## [1.1.0] - 2021-02-16
 

@@ -1,12 +1,12 @@
 {
   "name": "jp.co.psoft.pencil_4.urp.unity",
-  "version": "1.1.0",
-  "displayName": "PSOFT Pencil+ 4 Line URP",
-  "unity": "2018.3",
+  "version": "1.1.1",
+  "displayName": "PSOFT Pencil+ 4 Line URP for Unity",
+  "unity": "2022.1",
   "description": "Pencil+ 4 Line extension package for URP (Universal Render Pipeline).",
   "dependencies": {
     "jp.co.psoft.pencil_4.line.unity": "4.1.0",
-    "com.unity.render-pipelines.universal": "7.2.0"
+    "com.unity.render-pipelines.universal": "13.1.2"
   },
   "author": {
     "name": "P SOFTHOUSE Co., Ltd.",

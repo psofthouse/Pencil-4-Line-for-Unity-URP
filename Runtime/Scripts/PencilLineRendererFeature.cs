@@ -32,8 +32,12 @@ namespace Pencil_4.URP
                 return;
             }
 #endif
-            _pass.Setup(renderer.cameraColorTarget);
             renderer.EnqueuePass(_pass);
+        }
+
+        public override void SetupRenderPasses(ScriptableRenderer renderer, in RenderingData renderingData)
+        {
+            _pass.Setup(renderer.cameraColorTarget);
         }
 
         class RenderPass : ScriptableRenderPass

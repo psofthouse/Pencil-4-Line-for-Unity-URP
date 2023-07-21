@@ -19,7 +19,7 @@
 			HLSLPROGRAM
 
 			#pragma vertex Vert
-			#pragma fragment Frag
+			#pragma fragment Pcl4Frag
 
 			#pragma target 4.5
 			#pragma editor_sync_compilation
@@ -27,7 +27,7 @@
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
-			#include "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/Common.hlsl"
+			#include "Packages/com.unity.render-pipelines.core/Runtime/Utilities/Blit.hlsl"
 
 			TEXTURE2D_X(_MainTex);
 			float4 _MainTex_TexelSize;
@@ -44,11 +44,11 @@
 #endif
 			}
 
-			float4 Frag(Varyings input) : SV_Target
+			float4 Pcl4Frag(Varyings input) : SV_Target
 			{
 				UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(input);
 
-				float2 uv = UnityStereoTransformScreenSpaceTex(input.uv);
+				float2 uv = UnityStereoTransformScreenSpaceTex(input.texcoord);
 				int2   positionSS = uv * _MainTex_TexelSize.zw;
 
 				float4 lineColor = Load(positionSS, 0, 0);

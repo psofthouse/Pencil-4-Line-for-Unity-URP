@@ -1,4 +1,4 @@
-PSOFT Pencil+ 4 Line for Unity copyright © P SOFTHOUSE Co.,Ltd.
+PSOFT Pencil+ 4 Line URP for Unity copyright © P SOFTHOUSE Co.,Ltd.
 
 This software is licensed under the USER LICENSE AGREEMENT FOR
 P SOFTHOUSE SOFTWARE. See [USER LICENSE AGREEMENT FOR P SOFTHOUSE SOFTWARE](https://www.psoft.co.jp/cgi-html/en_license_agreement.html).
