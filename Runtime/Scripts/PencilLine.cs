@@ -1,5 +1,8 @@
 ﻿using System;
 using UnityEngine;
+#if !UNITY_6000_0_OR_NEWER
+using UnityEngine.Experimental.Rendering.RenderGraphModule;
+#endif
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
@@ -72,14 +75,26 @@ namespace Pencil_4.URP
 #else
                             cmd.IssuePluginCustomTextureUpdate(callback, renderElementTexture, textureUpdateHandle);
 #endif
+#if UNITY_2023_1_OR_NEWER
+                            cmd.SetRenderTarget(renderElementTargetTexture, RenderBufferLoadAction.DontCare, RenderBufferStoreAction.Store);
+                            Blitter.BlitQuad(cmd, renderElementTexture, new Vector4(1, 1, 0, 0),  new Vector4(1, 1, 0, 0), 0, false);
+#else
                             cmd.Blit(renderElementTexture, renderElementTargetTexture);
+#endif                            
                         }
                     }
 
                     // 描画設定
                     cmd.SetGlobalFloat("_Alpha", alpha.value);
                     cmd.SetGlobalVector("_BlitScaleBias", new Vector4(1, 1, 0, 0));
+#if UNITY_2023_1_OR_NEWER
+                    material.SetTexture("_MainTex", lineEffect.PencilRenderer.Texture);
+                    material.SetVector("_MainTex_TexelSize", new Vector4(1.0f / lineEffect.PencilRenderer.Texture.width, 1.0f / lineEffect.PencilRenderer.Texture.height, lineEffect.PencilRenderer.Texture.width, lineEffect.PencilRenderer.Texture.height));
+                    cmd.SetRenderTarget(renderTarget);             
+                    Blitter.BlitTexture(cmd, new Vector4(1, 1, 0, 0), material, 0);
+#else
                     cmd.Blit(lineEffect.PencilRenderer.Texture, renderTarget, material);
+#endif
                 }
             }
         }

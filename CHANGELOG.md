@@ -1,5 +1,11 @@
 # Changelog - PSOFT Pencil+ 4 Line URP for Unity
 
+## [1.1.2] - 2025-10-08
+
+### 機能追加
+- Unity 2023 と Unity 6 に対応
+
+
 ## [1.1.1] - 2023-08-01
 
 ### 修正点
