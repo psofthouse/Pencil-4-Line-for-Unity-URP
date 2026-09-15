@@ -29,6 +29,11 @@ namespace Pencil_4.URP
                 return;
             }
 
+            if (!renderingData.cameraData.postProcessEnabled)   
+            {
+                return;
+            }
+
 #if UNITY_EDITOR
             if (!EditorApplication.isPlaying && RenderMode.GameViewRenderMode == RenderMode.Mode.Off)
             {

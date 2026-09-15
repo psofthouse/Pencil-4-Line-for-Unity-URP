@@ -1,5 +1,11 @@
 # Changelog - PSOFT Pencil+ 4 Line URP for Unity
 
+## [1.1.3] - 2026-09-30
+
+### 修正点
+- Unity 6 以降でカメラの Post Processing 設定が反映されない不具合を修正
+
+
 ## [1.1.2] - 2025-10-08
 
 ### 機能追加
